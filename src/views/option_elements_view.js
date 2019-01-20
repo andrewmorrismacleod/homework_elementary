@@ -24,7 +24,26 @@ OptionElementsView.prototype.render = function() {
 
   this.container.addEventListener('click', (event) => {
     event.preventDefault();
-    const selectedElement = event.target;
+    let selectedElement = event.target;
+    let choiceIDFound = false;
+
+    while(!choiceIDFound){
+      this.choices.forEach( (choice) => {
+
+
+        if (choice.name===selectedElement.id) {
+
+          choiceIDFound = true;
+        }
+      });
+
+      if (!choiceIDFound) {
+        selectedElement = selectedElement.parentElement
+
+      }
+
+    };
+
     if (selectedElement.id === this.question[2].name) {
         // selectedElement.id = "choice_correct";
 
