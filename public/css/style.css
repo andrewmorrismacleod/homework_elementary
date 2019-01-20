@@ -23,7 +23,7 @@
 .choice_element {
   background-color: black;
   width:25%;
-  height: 320px;
+  height: 275px;
   text-align: center;
   border-radius: 20px;
   margin:20px;
@@ -97,6 +97,7 @@ header {
 .question_p_name{
   font-size:32px;
   color:aqua;
+  margin-bottom:10px;
 }
 
 .element_name {
