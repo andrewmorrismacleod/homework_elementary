@@ -8,16 +8,15 @@ const Elements = function () {
 
 Elements.prototype.getData = function() {
 
-  // const url = 'https://raw.githubusercontent.com/Bowserinator/Periodic-Table-JSON/master/PeriodicTableJSON.json';
-  // const request = new RequestHelper(url);
-  // request.get().then( (data) => {
-  //   this.data = data;
-  //   console.log(data);
-  //   PubSub.publish('Elements:data-ready', this.data);
-  // });
-
-    this.data = elementsTemp.elements;
+  const url = 'https://raw.githubusercontent.com/Bowserinator/Periodic-Table-JSON/master/PeriodicTableJSON.json';
+  const request = new RequestHelper(url);
+  request.get().then( (data) => {
+    this.data = data.elements;
     PubSub.publish('Elements:data-ready', this.data);
+  });
+
+    // this.data = elementsTemp.elements;
+    // PubSub.publish('Elements:data-ready', this.data);
 
 };
 
