@@ -23,7 +23,7 @@ OptionComponentView.prototype.render = function () {
   optionContainer.appendChild(chartContainer);
 
   const electronShell = new ElectronShell(`choice${this.index}`, this.element.shells);
-  electronShell.myFirstChart();
+  electronShell.generateShell();
 
 }
 

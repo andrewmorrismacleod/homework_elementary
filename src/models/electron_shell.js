@@ -58,7 +58,7 @@ ElectronShell.prototype.generateShellPoints = function() {
 };
 
 
-ElectronShell.prototype.myFirstChart = function () {
+ElectronShell.prototype.generateShell = function () {
 
   this.generateCircleObject();
   this.generateShellPoints();

@@ -24,7 +24,7 @@ QuestionComponentView.prototype.render = function () {
   blockContainer.appendChild(chartContainer);
 
   const electronShell = new ElectronShell(`question${this.index}`, this.element.shells);
-  electronShell.myFirstChart();
+  electronShell.generateShell();
 
 };
 
